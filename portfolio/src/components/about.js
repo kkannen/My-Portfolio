@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../portfolio.css';
+import '../styleSheets/about.css'
 
 class About extends Component {
   render() {

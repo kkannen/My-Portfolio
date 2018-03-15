@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './portfolio.css';
+
+//imports child components
 import NavBar from './components/navigation'
 import Header from './components/header'
 import PortPieces from './components/portPieces'

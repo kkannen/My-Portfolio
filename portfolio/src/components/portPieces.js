@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../portfolio.css';
+import '../styleSheets/portPieces.css'
 
 class PortPieces extends Component {
   render() {
