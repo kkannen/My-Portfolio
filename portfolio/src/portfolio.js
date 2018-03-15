@@ -12,7 +12,6 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio">
-        <h1>PORTY</h1>
         <NavBar/>
         <Header/>
         <PortPieces/>

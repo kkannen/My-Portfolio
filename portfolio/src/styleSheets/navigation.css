@@ -1,3 +1,24 @@
 .navBar{
-  color: orange;
+  background-color: #272727;
+  color: #eee;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  position: fixed;
+  margin-top: -21px;
+}
+
+
+.linksContainer{
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #eee;
+  margin-right: 25px
 }
