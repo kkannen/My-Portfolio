@@ -7,6 +7,14 @@ class PortPieces extends Component {
     return (
       <div className="portPieces">
         <h1>port pieces</h1>
+        <div className = 'gallery'>
+          <div className = 'portfolioPiece'></div>
+          <div className = 'portfolioPiece'></div>
+          <div className = 'portfolioPiece'></div>
+          <div className = 'portfolioPiece'></div>
+          <div className = 'portfolioPiece'></div>
+          <div className = 'portfolioPiece'></div>
+        </div>
       </div>
     );
   }
