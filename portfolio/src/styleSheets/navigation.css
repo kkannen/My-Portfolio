@@ -6,8 +6,8 @@
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-  position: fixed;
-  margin-top: -21px;
+  position: sticky;
+
 }
 
 
