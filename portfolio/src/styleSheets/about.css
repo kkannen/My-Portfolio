@@ -1,3 +1,16 @@
 .about{
-  color: blue
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+}
+
+.bio {
+  width: 50%;
+  text-align: center;
+}
+
+.myLinks {
+    width: 50%;
+    text-align: center;
 }
