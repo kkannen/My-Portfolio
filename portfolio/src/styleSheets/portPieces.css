@@ -8,6 +8,32 @@
   justify-content: center;
 }
 
+
+
+#calculator {
+
+}
+
+#tic-tac-toe {
+
+}
+
+#driftwood {
+
+}
+
+#airplane{
+
+}
+
+#nasa {
+
+}
+
+#welcome {
+
+}
+
 .portfolioPiece {
   height: 150px;
   width: 300px;
@@ -16,5 +42,5 @@
 }
 
 .portfolioPiece:hover {
-  background-color: #111;
+  background-color: black;
 }

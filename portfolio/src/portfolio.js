@@ -8,7 +8,15 @@ import PortPieces from './components/portPieces'
 import About from './components/about'
 import Footer from './components/footer'
 
+
+
 class Portfolio extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    }
+  }
+  
   render() {
     return (
       <div className="portfolio">

@@ -15,6 +15,7 @@ class About extends Component {
           <p className = 'links'>titter</p>
           <p className = 'links'>codepen</p>
           <p className = 'links'>github</p>
+          <p className = 'links'>linkedIn</p>
           <p className = 'links'>google or something</p>
 
         </div>
