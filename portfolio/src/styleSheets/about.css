@@ -1,16 +1,48 @@
 .about{
   display: flex;
-  width: 80%;
-  margin: auto;
+  flex-wrap: wrap;
 
 }
 
 .bio {
-  width: 50%;
+  width: 40%;
+  margin-left: 10%;
   text-align: center;
 }
 
 .myLinks {
-    width: 50%;
+    width: 40%;
+    margin-left: 5%;
     text-align: center;
+}
+
+/*for mobile*/
+@media (max-width: 767px){
+  .bio {
+    width: 80%;
+  }
+
+  .myLinks {
+      width: 80%;
+  }
+}
+
+.linkDiv {
+  font-size: 24px;
+  margin: 15px;
+}
+
+.links {
+  color: #241A17;
+  text-shadow: 2px 2px 5px grey;
+}
+
+.links:hover {
+  font-weight: bold;
+  font-size: 26px;
+  text-shadow: 5px 5px 10px;
+}
+
+.blurb {
+  font-size: 18px;
 }

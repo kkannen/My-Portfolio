@@ -76,7 +76,6 @@
   margin: 0 auto;
   color: white;
   letter-spacing: 3px;
-  text-decoration: none;
   text-align: center;
   border: 2px solid white;
   border-radius: 3px;
@@ -90,7 +89,6 @@
 .portLink:hover {
   background-color: white;
   color: #241A17;
-  text-decoration: none;
 }
 
 .portOverlay {
