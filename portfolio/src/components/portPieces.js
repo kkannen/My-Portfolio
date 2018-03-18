@@ -18,7 +18,7 @@ class PortPieces extends Component {
   render() {
     return (
       <div className="portPieces">
-        <h1>PORTFOLIO</h1> <hr/>
+        <h2>PORTFOLIO</h2> <hr/>
         <div className = 'gallery'>
           {this.state.portfolioList.map((itemArr, k) => {
             return(

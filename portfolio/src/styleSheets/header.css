@@ -1,4 +1,13 @@
 .header{
 text-align: center;
 padding: 100px;
+box-shadow: 10px 0px 30px #241A17;
+color: white;
+background:radial-gradient(200% 100% at bottom center,#F7F7B6,#E96F92,#75517D,#1B2947);
+
+}
+
+h1{
+  font-family: 'Euphoria Script', cursive;
+  font-size: 100px;
 }
