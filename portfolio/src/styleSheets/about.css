@@ -1,29 +1,36 @@
 .about{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
 }
 
 .bio {
-  width: 40%;
-  margin-left: 10%;
+  width: 80%;
   text-align: center;
+}
+
+.mySkills {
+  width: 40%;
+  margin: 5%;
+  text-align: center;
+  font-size: 22px
 }
 
 .myLinks {
     width: 40%;
-    margin-left: 5%;
+    margin: 5%;
     text-align: center;
 }
 
 /*for mobile*/
 @media (max-width: 767px){
-  .bio {
-    width: 80%;
-  }
 
   .myLinks {
       width: 80%;
+  }
+  .mySkills {
+    width: 80%;
   }
 }
 

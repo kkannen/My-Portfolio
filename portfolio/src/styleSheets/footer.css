@@ -3,10 +3,32 @@
   justify-content: center;
 }
 
+.iconContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+}
+
+.lilDot  {
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background-color: #FDE36D;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  transition: 200ms;
+}
+
+.iconContainer:hover > .lilDot {
+  height: 60px;
+  width: 60px;
+  opacity: 0.85;
+}
 
 .footIcon {
   height: 35px;
   width: 35px;
-  background-image: url(http://via.placeholder.com/25x25);
   margin: 10px;
 }
