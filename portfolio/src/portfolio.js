@@ -14,17 +14,18 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
     }
   }
-  
+
   render() {
     return (
       <div className="portfolio">
-        <NavBar/>
-        <Header/>
-        <PortPieces/>
-        <About/>
-        <Footer/>
+        <NavBar id = 'nav'/>
+        <Header id = 'home'/>
+        <PortPieces id = 'portfolio'/>
+        <About id = 'about'/>
+        <Footer id = 'foot'/>
       </div>
     );
   }

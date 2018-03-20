@@ -4,6 +4,7 @@ padding: 100px;
 box-shadow: 10px 0px 30px #241A17;
 color: white;
 background:radial-gradient(200% 100% at bottom center,#F7F7B6,#E96F92,#75517D,#1B2947);
+padding-top: 150px;
 }
 
 .container {
@@ -22,7 +23,7 @@ background:radial-gradient(200% 100% at bottom center,#F7F7B6,#E96F92,#75517D,#1
   height:0;
   width: 0;
   opacity: 0;
-  border: 8px dotted #F7F2B8;
+  border: 8px dotted white;
   border-radius: 50%;
   z-index: 1;
   position: absolute;
@@ -32,7 +33,7 @@ background:radial-gradient(200% 100% at bottom center,#F7F7B6,#E96F92,#75517D,#1
 .container:hover > #dot {
   height:250px;
   width: 275px;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 h1{

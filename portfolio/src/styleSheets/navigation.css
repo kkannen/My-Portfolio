@@ -3,18 +3,24 @@
   color: #eee;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-  position: sticky;
+  position: fixed;
+  z-index: 11;
 
 }
 
+h3 {
+  font-family: 'Euphoria Script', cursive;
+  font-size: 30px;
+}
 
 .linksContainer{
   display: flex;
   align-items: center;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .navLink {
