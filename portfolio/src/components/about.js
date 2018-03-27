@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import '../portfolio.css';
 import '../styleSheets/about.css'
 
-class About extends Component {
-  state = {
-    socialLinks: [
-      ['TWITTER: @kkanencoding', 'https://twitter.com/kkannencoding/'],
-      ['LINKEDIN: Krista Kannen', 'https://www.linkedin.com/in/krista-kannen-6b1a4498/'],
-      ['GITHUB: kkannen', 'https://github.com/kkannen'],
-      ['CODEPEN: kkannen', 'https://codepen.io/kkannen/'],
-      ['GOOGLE+: Krista Kannen', 'https://plus.google.com/115866610770594816349'],
-    ]
-  }
 
+const socialLinksList = [
+  {name: 'TWITTER: @kkanencoding', link: 'https://twitter.com/kkannencoding/'},
+  {name: 'LINKEDIN: Krista Kannen', link: 'https://www.linkedin.com/in/krista-kannen-6b1a4498/'},
+  {name: 'GITHUB: kkannen', link: 'https://github.com/kkannen'},
+  {name: 'CODEPEN: kkannen', link: 'https://codepen.io/kkannen/'},
+  {name: 'GOOGLE+: Krista Kannen', link: 'https://plus.google.com/115866610770594816349'},
+  ]
+
+class About extends Component {
   render() {
     return (
       <div className="about">
@@ -31,8 +30,8 @@ class About extends Component {
         </div>
         <div className = 'myLinks'>
           <h2>Where to find me</h2><hr/>
-          {this.state.socialLinks.map((itemArr) => {
-            return <div className = 'linkDiv'><a className = 'links' href = {itemArr[1]}>{itemArr[0]}</a></div>
+          {socialLinksList.map((obj, key) => {
+            return <div className = 'linkDiv'><a className = 'links' href = {obj.link}>{obj.name}</a></div>
           })}
         </div>
       </div>
