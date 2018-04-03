@@ -1,24 +1,38 @@
 .navBar{
-  background-color: #272727;
+  background-color: #241A17;
   color: #eee;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-  position: sticky;
-
+  position: fixed;
+  z-index: 11;
 }
 
+h3 {
+  font-family: 'Euphoria Script', cursive;
+  font-size: 30px;
+  display: block;
+  -webkit-margin-before: 0.35em;
+  -webkit-margin-after: 0.35em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+font-weight: bold;
+}
 
 .linksContainer{
   display: flex;
   align-items: center;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .navLink {
-  text-decoration: none;
   color: #eee;
   margin-right: 25px
+}
+
+.brand {
+  margin-top: 5px;
 }

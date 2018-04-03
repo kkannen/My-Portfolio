@@ -1,16 +1,55 @@
 .about{
   display: flex;
-  width: 80%;
-  margin: auto;
-
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .bio {
-  width: 50%;
+  width: 80%;
+  text-align: center;
+}
+
+.mySkills {
+  width: 40%;
+  margin: 5%;
   text-align: center;
 }
 
 .myLinks {
-    width: 50%;
+    width: 40%;
+    margin: 5%;
     text-align: center;
+}
+
+/*for mobile*/
+@media (max-width: 767px){
+
+  .myLinks {
+      width: 80%;
+  }
+  .mySkills {
+    width: 80%;
+  }
+}
+
+.linkDiv {
+  font-size: 24px;
+  margin: 15px;
+}
+
+.links {
+  color: #241A17;
+}
+
+.links:hover {
+  font-weight: bold;
+}
+
+.blurb {
+  font-size: 18px;
+}
+
+p {
+    font-size: 24px;
 }

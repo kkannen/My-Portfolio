@@ -1,3 +1,35 @@
 .portfolio{
-  color: red;
+  color: #241A17;
+  text-align: center;
+}
+
+.portPieces{
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin-left: 10%
+}
+
+h2 {
+  letter-spacing: 1px;
+}
+
+hr {
+  width: 80%;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
 }
