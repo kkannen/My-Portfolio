@@ -1,5 +1,6 @@
 .portfolio{
   color: #241A17;
+  text-align: center;
 }
 
 .portPieces{
@@ -14,6 +15,9 @@
   margin-left: 10%
 }
 
+h2 {
+  letter-spacing: 1px;
+}
 
 hr {
   width: 80%;

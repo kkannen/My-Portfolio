@@ -16,6 +16,7 @@ class NavBar extends Component {
         <div className = 'linksContainer'>
           <div><a className = 'navLink' href = '#home'>HOME</a></div>
           <div><a className = 'navLink' href = '#portfolio'>PORTFOLIO</a></div>
+          <div><a className = 'navLink' href = '#about'>ASTRONOMY</a></div>
           <div><a className = 'navLink' href = '#about'>ABOUT</a></div>
         </div>
       </div>

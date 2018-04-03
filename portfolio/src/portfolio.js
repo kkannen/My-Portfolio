@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './portfolio.css';
+import axios from 'axios';
 
 //imports child components
 import NavBar from './components/navigation'
@@ -9,6 +10,7 @@ import PortPieces from './components/portPieces'
 import About from './components/about'
 import Footer from './components/footer'
 import StoryItem from './components/StoryItem'
+import NasaPicOfTheDay from './components/NasaPicOfTheDay'
 
 const portfolioList = [
   {id: 'calculator', title: 'CALCULATOR', description: 'A cute little calculating monster.', link: 'https://codepen.io/kkannen/full/WXOMgZ'},
@@ -31,27 +33,26 @@ class Portfolio extends Component {
     state = {
       portfolioPieces: [],
       footerIcons: [],
-      stories: [],
+      astronomy: [],
+      items: null,
+      error: null,
     }
 
 
   componentDidMount = () => {
-    fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty').then((res) => {
-   res.json().then((storyIds) => {
-     storyIds.slice(0, 50).forEach((storyId) => {
-       fetch(`https://hacker-news.firebaseio.com/v0/item/${storyId}.json?print=pretty`).then((res) => {
-         res.json().then((story) => {
-
-           const accessStories = this.state.stories
-           accessStories.push(story)
-           this.setState({stories: accessStories})
-         })
-       });
-     });
-   });
- })
-    this.setState({portfolioPieces: portfolioList, footerIcons: footerIconsList})
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=zb7apZ47ldvNSN8fr5zDcIhADFokQ6l7hkV6fY6g')
+      .then(response => {
+        this.setState({
+          astronomy: response.data
+        })
+      })
+      .catch(error => {
+        console.log(error, 'failed to fetch data')
+      })
+      this.setState({portfolioPieces: portfolioList, footerIcons: footerIconsList})
   }
+
+
 
   render() {
     return (
@@ -71,9 +72,11 @@ class Portfolio extends Component {
                   link = {obj.link}/>); })}
           </div>
         </div>
-        {this.state.stories.map((story, k) => {
-           return <StoryItem key = {k} title = {story.title} by = {story.by}/>
-         })}
+        <NasaPicOfTheDay
+          picture={this.state.astronomy.hdurl}
+          title={this.state.astronomy.title}
+          description={this.state.astronomy.explanation}
+        />
         <About id = 'about'/>
 
         <div className="footer">

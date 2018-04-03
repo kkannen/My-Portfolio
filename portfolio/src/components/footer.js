@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../portfolio.css';
 import '../styleSheets/footer.css'
-import '../img/linkedinDark.png'
+
 
 
 class Footer extends Component {

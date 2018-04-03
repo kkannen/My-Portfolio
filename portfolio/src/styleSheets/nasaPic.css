@@ -1,0 +1,30 @@
+.nasa{
+  padding: 25px 0px 50px;
+  background-color: #e2e2e2;
+  box-shadow: -10px 0px 30px #241A17;
+}
+
+img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.npod {
+  display: flex;
+  justify-content: center;
+  width:90%;
+  margin-left: 5%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+p {
+  font-size: 20px;
+  margin: 20px;
+}
+
+h4 {
+  font-size: 25px;
+  margin: 20px;
+}
