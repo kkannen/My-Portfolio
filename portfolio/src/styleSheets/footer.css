@@ -29,38 +29,3 @@
   width: 45px;
   margin: 20px;
 }
-
-#homeIcon {
- background-image: url(../img/homeDark.png);
- background-size: contain;
- background-repeat: no-repeat;
- background-position: center;
-}
-
-#githubIcon {
- background-image: url(../img/githubDark.png);
- background-size: contain;
- background-repeat: no-repeat;
- background-position: center;
-}
-
-#codepenIcon {
- background-image: url(../img/codepenDark.png);
- background-size: contain;
- background-repeat: no-repeat;
- background-position: center;
-}
-
-#twitterIcon {
- background-image: url(../img/twitterDark.png);
- background-size: contain;
- background-repeat: no-repeat;
- background-position: center;
-}
-
-#linkedinIcon {
- background-image: url(../img/linkedinDark.png);
- background-size: contain;
- background-repeat: no-repeat;
- background-position: center;
-}

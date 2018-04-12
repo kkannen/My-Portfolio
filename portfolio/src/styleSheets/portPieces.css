@@ -10,33 +10,6 @@
   margin-left: 10%
 }
 
-
-
-#calculator {
-  background-image: url(../img/Calculator.PNG);
-}
-
-#tic-tac-toe {
-  background-image: url(../img/ticTacToe.png);
-}
-
-#driftwood {
-  background-image: url(../img/driftwoodThumbnail.PNG);
-}
-
-#airplane{
-  background-image: url(../img/airplaneThumbnail.PNG);
-}
-
-#nasa {
-  background-image: url(../img/nasaThumbnail.PNG);
-}
-
-#office {
-  background-image: url(../img/office.PNG);
-
-}
-
 .portfolioPiece {
   position: relative;
   display: block;

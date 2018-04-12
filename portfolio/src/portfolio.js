@@ -5,29 +5,44 @@ import axios from 'axios';
 import Scrollspy from 'react-scrollspy';
 
 //imports child components
-import NavBar from './components/navigation'
-import Header from './components/header'
-import PortPieces from './components/portPieces'
-import About from './components/about'
-import Footer from './components/footer'
-import StoryItem from './components/StoryItem'
-import NasaPicOfTheDay from './components/NasaPicOfTheDay'
+import NavBar from './components/navigation';
+import Header from './components/header';
+import PortPieces from './components/portPieces';
+import About from './components/about';
+import Footer from './components/footer';
+import StoryItem from './components/StoryItem';
+import NasaPicOfTheDay from './components/NasaPicOfTheDay';
+
+//imports images
+//portfolio
+import airplaneThumbnail from './img/airplaneThumbnail.PNG';
+import calculatorThumbnail from './img/Calculator.PNG';
+import driftwoodThumbnail from './img/driftwoodThumbnail.PNG';
+import nasaThumbnail from './img/nasaThumbnail.PNG';
+import officeThumbnail from './img/office.PNG';
+import tictactoeThumbnail from './img/ticTacToe.png';
+//footer
+import home from './img/homeDark.png'
+import github from './img/githubDark.png'
+import codepen from './img/codepenDark.png'
+import twitter from './img/twitterDark.png'
+import linkedin from './img/linkedinDark.png'
 
 const portfolioList = [
-  {id: 'calculator', title: 'CALCULATOR', description: 'A cute little calculating monster.', link: 'https://codepen.io/kkannen/full/WXOMgZ'},
-  {id: 'tic-tac-toe', title: 'TIC-TAC-TOE', description: 'tic-tac-toe game made using react', link: 'https://codepen.io/kkannen/'},
-  {id: 'nasa', title: 'NASA', description: 'Contact page for NASA', link: 'https://codepen.io/kkannen/full/JOpagY'},
-  {id: 'office', title: 'THE OFFICE', description: 'The Office themed clicker game', link: 'https://codepen.io/kkannen/'},
-  {id: 'driftwood', title: 'DRIFTWOOD', description: 'Remodel of the Driftwood Estate Winery site.', link: 'https://codepen.io/kkannen/full/vWdVEm'},
-  {id: 'airplane', title: 'UX ATLANTIC', description: 'Booking page for UX Atlantic Airline', link: 'https://codepen.io/kkannen/full/mqBOPo'}
+  {thumbnail: calculatorThumbnail, title: 'CALCULATOR', description: 'A cute little calculating monster.', link: 'https://codepen.io/kkannen/full/WXOMgZ'},
+  {thumbnail: tictactoeThumbnail, title: 'TIC-TAC-TOE', description: 'tic-tac-toe game made using react', link: 'https://codepen.io/kkannen/'},
+  {thumbnail: nasaThumbnail, title: 'NASA', description: 'Contact page for NASA', link: 'https://codepen.io/kkannen/full/JOpagY'},
+  {thumbnail: officeThumbnail, title: 'THE OFFICE', description: 'The Office themed clicker game', link: 'https://codepen.io/kkannen/'},
+  {thumbnail: driftwoodThumbnail, title: 'DRIFTWOOD', description: 'Remodel of the Driftwood Estate Winery site.', link: 'https://codepen.io/kkannen/full/vWdVEm'},
+  {thumbnail: airplaneThumbnail, title: 'UX ATLANTIC', description: 'Booking page for UX Atlantic Airline', link: 'https://codepen.io/kkannen/full/mqBOPo'}
 ]
 
 const footerIconsList = [
-  {id: 'homeIcon', link: 'https://codepen.io/kkannen/'},
-  {id: 'githubIcon', link: 'https://github.com/kkannen'},
-  {id: 'codepenIcon', link: 'https://codepen.io/kkannen/'},
-  {id: 'twitterIcon', link: 'https://twitter.com/kkannencoding/'},
-  {id: 'linkedinIcon', link: 'https://www.linkedin.com/in/krista-kannen-6b1a4498/'}
+  {icon: home, link: 'https://codepen.io/kkannen/'},
+  {icon: github, link: 'https://github.com/kkannen'},
+  {icon: codepen, link: 'https://codepen.io/kkannen/'},
+  {icon: twitter, link: 'https://twitter.com/kkannencoding/'},
+  {icon: linkedin, link: 'https://www.linkedin.com/in/krista-kannen-6b1a4498/'}
 ]
 
 class Portfolio extends Component {
@@ -67,7 +82,7 @@ class Portfolio extends Component {
               return (
                 <PortPieces
                   key = {key}
-                  id = {obj.id}
+                  thumbnail = {obj.thumbnail}
                   title = {obj.title}
                   description = {obj.description}
                   link = {obj.link}/>); })}
@@ -81,12 +96,12 @@ class Portfolio extends Component {
         <About/>
 
         <div className="footer">
-          {this.state.footerIcons.map((icon, key) => {
+          {this.state.footerIcons.map((obj, key) => {
             return(
               <Footer
                 key = {key}
-                id = {icon.id}
-                link = {icon.link}/>)})}
+                icon = {obj.icon}
+                link = {obj.link}/>)})}
         </div>
       </div>
     );
