@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './portfolio.css';
 import axios from 'axios';
+import Scrollspy from 'react-scrollspy';
 
 //imports child components
 import NavBar from './components/navigation'
@@ -57,9 +58,9 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio">
-        <NavBar id = 'nav'/>
-        <Header id = 'home'/>
-        <div className = 'portPieces'>
+      <NavBar id = 'nav'/>
+        <Header/>
+        <div className = 'portPieces' id='portfolio'>
           <h2>PORTFOLIO</h2><hr/>
           <div className = 'gallery'>
             {this.state.portfolioPieces.map((obj, key) => {
@@ -77,7 +78,7 @@ class Portfolio extends Component {
           title={this.state.astronomy.title}
           description={this.state.astronomy.explanation}
         />
-        <About id = 'about'/>
+        <About/>
 
         <div className="footer">
           {this.state.footerIcons.map((icon, key) => {

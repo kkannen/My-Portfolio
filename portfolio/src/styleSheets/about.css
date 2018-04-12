@@ -6,44 +6,27 @@
 }
 
 .bio {
-  width: 80%;
-  text-align: center;
-}
-
-.mySkills {
-  width: 40%;
+  width: 50%;
   margin: 5%;
   text-align: center;
 }
 
-.myLinks {
-    width: 40%;
-    margin: 5%;
-    text-align: center;
+.mySkills {
+  width: 30%;
+  margin: 5%;
+  text-align: center;
 }
+
 
 /*for mobile*/
 @media (max-width: 767px){
 
-  .myLinks {
+  #about{
       width: 80%;
   }
   .mySkills {
     width: 80%;
   }
-}
-
-.linkDiv {
-  font-size: 24px;
-  margin: 15px;
-}
-
-.links {
-  color: #241A17;
-}
-
-.links:hover {
-  font-weight: bold;
 }
 
 .blurb {

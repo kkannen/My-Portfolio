@@ -19,7 +19,7 @@ class NasaPicOfTheDay extends Component {
     };
 
     return (
-      <div className="nasa">
+      <div className="nasa" id='astronomy'>
         <h2>{"NASA'S PHOTO OF THE DAY"}</h2>
         <p>Learn something about space.</p>
         <div className='npod'>
