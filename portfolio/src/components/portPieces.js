@@ -14,7 +14,7 @@ class PortPieces extends Component {
             <h2 className = "portTitle">{this.props.title}</h2>
             <p className = "portDescription">{this.props.description}</p>
           </div>
-          <a className = "portLink" href={this.props.link} target="_blank">CODEPEN</a>
+          <a className = "portLink" href={this.props.link} target="_blank">{this.props.linkTo}</a>
         </div>
       </div>
     );

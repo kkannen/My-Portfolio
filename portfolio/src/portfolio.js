@@ -29,12 +29,12 @@ import twitter from './img/twitterDark.png'
 import linkedin from './img/linkedinDark.png'
 
 const portfolioList = [
-  {thumbnail: calculatorThumbnail, title: 'CALCULATOR', description: 'A cute little calculating monster.', link: 'https://codepen.io/kkannen/full/WXOMgZ'},
-  {thumbnail: tictactoeThumbnail, title: 'TIC-TAC-TOE', description: 'tic-tac-toe game made using react', link: 'https://codepen.io/kkannen/'},
-  {thumbnail: nasaThumbnail, title: 'NASA', description: 'Contact page for NASA', link: 'https://codepen.io/kkannen/full/JOpagY'},
-  {thumbnail: officeThumbnail, title: 'THE OFFICE', description: 'The Office themed clicker game', link: 'https://codepen.io/kkannen/'},
-  {thumbnail: driftwoodThumbnail, title: 'DRIFTWOOD', description: 'Remodel of the Driftwood Estate Winery site.', link: 'https://codepen.io/kkannen/full/vWdVEm'},
-  {thumbnail: airplaneThumbnail, title: 'UX ATLANTIC', description: 'Booking page for UX Atlantic Airline', link: 'https://codepen.io/kkannen/full/mqBOPo'}
+  {thumbnail: calculatorThumbnail, title: 'CALCULATOR', description: 'A cute little calculating monster.', linkTo:'CODEPEN', link: 'https://codepen.io/kkannen/full/WXOMgZ'},
+  {thumbnail: tictactoeThumbnail, title: 'TIC-TAC-TOE', description: 'tic-tac-toe game made using react', linkTo:'GITHUB', link: 'https://github.com/kkannen/javascript-workbook/blob/gh-pages/07week/tic-tac-toes/src/App.js'},
+  {thumbnail: nasaThumbnail, title: 'NASA', description: 'Contact page for NASA', linkTo:'CODEPEN', link: 'https://codepen.io/kkannen/full/JOpagY'},
+  {thumbnail: officeThumbnail, title: 'THE OFFICE', description: 'The Office themed clicker game', linkTo:'GITHUB', link: 'https://github.com/kkannen/web-workbook/tree/gh-pages/10week/Checkpoint03'},
+  {thumbnail: driftwoodThumbnail, title: 'DRIFTWOOD', description: 'Remodel of the Driftwood Estate Winery site.', linkTo:'CODEPEN', link: 'https://codepen.io/kkannen/full/vWdVEm'},
+  {thumbnail: airplaneThumbnail, title: 'UX ATLANTIC', description: 'Booking page for UX Atlantic Airline', linkTo:'CODEPEN', link: 'https://codepen.io/kkannen/full/mqBOPo'}
 ]
 
 const footerIconsList = [
@@ -81,11 +81,13 @@ class Portfolio extends Component {
             {this.state.portfolioPieces.map((obj, key) => {
               return (
                 <PortPieces
-                  key = {key}
-                  thumbnail = {obj.thumbnail}
-                  title = {obj.title}
-                  description = {obj.description}
-                  link = {obj.link}/>); })}
+                  key={key}
+                  thumbnail={obj.thumbnail}
+                  title={obj.title}
+                  description={obj.description}
+                  linkTo={obj.linkTo}
+                  link={obj.link}
+                  />); })}
           </div>
         </div>
         <NasaPicOfTheDay
