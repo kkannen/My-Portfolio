@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import '../portfolio.css';
 import '../styleSheets/nasaPic.css'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 
 class NasaPicOfTheDay extends Component {
-
-
 
   render() {
 
@@ -20,8 +17,7 @@ class NasaPicOfTheDay extends Component {
 
     return (
       <div className="nasa" id='astronomy'>
-        <h2>{"NASA'S PHOTO OF THE DAY"}</h2>
-        <p>Learn something about space.</p>
+
         <div className='npod'>
           <Paper className = 'pic' style={style} zDepth={5} rounded={true}>
             <img src = {this.props.picture}/>

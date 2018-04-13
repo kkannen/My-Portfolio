@@ -3,6 +3,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './portfolio.css';
 import axios from 'axios';
 import Scrollspy from 'react-scrollspy';
+import RaisedButton from 'material-ui/RaisedButton';
+
+
 
 //imports child components
 import NavBar from './components/navigation';
@@ -52,23 +55,37 @@ class Portfolio extends Component {
       astronomy: [],
       items: null,
       error: null,
+      clicked: false
     }
 
 
   componentDidMount = () => {
+    this.setState({portfolioPieces: portfolioList, footerIcons: footerIconsList})
+  }
+
+  handleClick = () => {
+    const clicked = this.state.clicked
     axios.get('https://api.nasa.gov/planetary/apod?api_key=zb7apZ47ldvNSN8fr5zDcIhADFokQ6l7hkV6fY6g')
       .then(response => {
-        this.setState({
-          astronomy: response.data
-        })
+        this.setState({astronomy: response.data, clicked: clicked == false ? true : false})
       })
       .catch(error => {
         console.log(error, 'failed to fetch data')
       })
-      this.setState({portfolioPieces: portfolioList, footerIcons: footerIconsList})
   }
 
-
+  renderNasa = () => {
+    if(!this.state.clicked){
+      return null;
+    }
+    return (
+      <NasaPicOfTheDay
+         picture={this.state.astronomy.hdurl}
+         title={this.state.astronomy.title}
+         description={this.state.astronomy.explanation}
+       />
+    )
+  }
 
   render() {
     return (
@@ -78,7 +95,7 @@ class Portfolio extends Component {
         <div className = 'portPieces' id='portfolio'>
           <h2>PORTFOLIO</h2><hr/>
           <div className = 'gallery'>
-            {this.state.portfolioPieces.map((obj, key) => {
+            {portfolioList.map((obj, key) => {
               return (
                 <PortPieces
                   key={key}
@@ -90,15 +107,18 @@ class Portfolio extends Component {
                   />); })}
           </div>
         </div>
-        <NasaPicOfTheDay
-          picture={this.state.astronomy.hdurl}
-          title={this.state.astronomy.title}
-          description={this.state.astronomy.explanation}
-        />
+        <div className='nasaContainer'>
+          <h2>{"NASA'S PHOTO OF THE DAY"}</h2>
+          <p>Learn something about space.</p>
+
+          {this.renderNasa()}
+          <RaisedButton onClick={this.handleClick} label={!this.state.clicked ? 'NASA PHOTO OF THE DAY' : "COLLAPSE PHOTO"} secondary={true} style={{marginTop: 20, height: 75, width: 400}} />
+
+        </div>
         <About/>
 
         <div className="footer">
-          {this.state.footerIcons.map((obj, key) => {
+          {footerIconsList.map((obj, key) => {
             return(
               <Footer
                 key = {key}
